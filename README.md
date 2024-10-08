@@ -1,4 +1,4 @@
-# Project_OCR
+# Project_Mercari
 
 ## Overview
 Project_OCR is an Optical Character Recognition (OCR) service built with Flask, Celery, and Redis. This application allows users to submit images, processes them using Tesseract OCR, and retrieves the extracted text. It includes a simple web frontend and a backend service that handles OCR tasks asynchronously.
