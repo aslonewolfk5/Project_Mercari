@@ -1,0 +1,20 @@
+version: '3.8'
+
+services:
+  web:
+    image: fa25546550f882594b9065fd9ee6d87b4f176667d02afdceed5a6e7624d07f24
+    ports:
+      - "5001:5000"
+    depends_on:
+      - redis
+      - celery
+
+  redis:
+    image: redis:7.2.5
+    ports:
+      - "6379:6379"
+
+  celery:
+    image: 4eb0ef2de67a23bd7b919b107d02dbdef56a6f885acc9c4a4757057ad29fc8cd
+    depends_on:
+      - redis
